@@ -50,10 +50,10 @@ numbersList.innerHTML = `
 
 let arr = [
  `${randomNumber1}`,
- ` ${randomNumber2}`,
- ` ${randomNumber3}`,
+ `${randomNumber2}`,
+ `${randomNumber3}`,
  `${randomNumber4}`,
- ` ${randomNumber5}`,
+ `${randomNumber5}`,
   ]
 
 console.log(arr)
@@ -67,7 +67,12 @@ let submitButton = document.getElementById('submit')
 submitButton.addEventListener('click', function(event){
   event.preventDefault();
 
-  
+    for (let i = 0; i < arr.length; i++) {
+      hiddenNumber = arr[i];
+      console.log(hiddenNumber);
+    }
+
+    
 
   console.log('click')
 })
@@ -109,6 +114,18 @@ submitButton.addEventListener('click', function(event){
 // } else {
 //   alert ("la tua mail non è presente nell'array" )
 // }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //colleghiamo le parti di html a js con "getElemntById"
