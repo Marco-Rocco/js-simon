@@ -1,6 +1,13 @@
 //collegare il countdown
 let showCountDown = document.getElementById('countdown');
 
+//collegare la lista di numeri casuali
+let numbersList = document.getElementById('numbers-list');
+
+//collegare il form
+let answersForm = document.getElementById('answers-form')
+
+//crea funzione
 let count = 10;
 let countDown = setInterval(function(){
   console.log(count);
@@ -10,6 +17,9 @@ let countDown = setInterval(function(){
   if (count === -1){
     showCountDown.innerText = ('prova ad indovinare!!');
     console.log('Prova ad indovinare!!');
+
+    numbersList.className = 'd-none';
+    answersForm.className = 'd-block';
     
     clearInterval(countDown);
   }
@@ -19,8 +29,7 @@ let countDown = setInterval(function(){
 
 showCountDown.innerText = (count);
 
-//collegare la lista di numeri casuali
-let numbersList = document.getElementById('numbers-list');
+
 
 let randomNumber = function() {
     return Math.floor(Math.random() * 99);
