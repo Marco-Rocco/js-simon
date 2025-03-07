@@ -58,24 +58,44 @@ let arr = [
 
 console.log(arr)
 
+
 ///////////////////////////
+// collego il bottone
 
-let submitButton = document.getElementById('submit')
+let submitButton = document.querySelector('button')
+let message = document.getElementById('message')
+console.log(message)
 
+submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
 
-
-submitButton.addEventListener('click', function(event){
-  event.preventDefault();
-
+    let solved = 0
+    let userGuess = document.getElementsByTagName('input')
     for (let i = 0; i < arr.length; i++) {
-      hiddenNumber = arr[i];
-      console.log(hiddenNumber);
+      let userGuessValue = userGuess[i].value;
+
+      if (arr.includes(userGuessValue)){
+        solved++
+      }
     }
 
-    
-
-  console.log('click')
+    if(solved === 5) {
+      message.innerText = 'hai indovinato!!'
+    } else{
+      message.innerText = 'hai perso'
+    }
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
