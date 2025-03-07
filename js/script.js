@@ -8,7 +8,7 @@ let numbersList = document.getElementById('numbers-list');
 let answersForm = document.getElementById('answers-form')
 
 //crea funzione
-let count = 0;
+let count = 10;
 let countDown = setInterval(function(){
   console.log(count);
   showCountDown.innerText = (count);
