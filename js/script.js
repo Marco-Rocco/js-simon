@@ -8,7 +8,7 @@ let numbersList = document.getElementById('numbers-list');
 let answersForm = document.getElementById('answers-form')
 
 //crea funzione
-let count = 1;
+let count = 0;
 let countDown = setInterval(function(){
   console.log(count);
   showCountDown.innerText = (count);
@@ -80,9 +80,9 @@ submitButton.addEventListener('click', function(event) {
     }
 
     if(solved === 5) {
-      message.innerText = 'hai indovinato!!'
+      message.innerHTML = '<p class="text-success text-center" id="message">HAI VINTO!!</p>';
     } else{
-      message.innerText = 'hai perso'
+      message.innerText = 'Hai perso'
     }
 })
 
