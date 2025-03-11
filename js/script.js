@@ -8,7 +8,7 @@ let numbersList = document.getElementById('numbers-list');
 let answersForm = document.getElementById('answers-form')
 
 //crea funzione
-let count = 10;
+let count = 1;
 let countDown = setInterval(function(){
   console.log(count);
   showCountDown.innerText = (count);
@@ -81,7 +81,13 @@ submitButton.addEventListener('click', function(event) {
 
     if(solved === 5) {
       message.innerHTML = '<p class="text-success text-center" id="message">HAI VINTO!!</p>';
-    } else{
+    } else if(solved === 4) {
+      message.innerHTML = '<p class="text-success text-center" id="message">hai indovinato 4 numeri</p>';
+    } else if(solved === 3) {
+      message.innerHTML = '<p class="text-success text-center" id="message">hai indovinato 3 numeri</p>';
+    } else if(solved === 2) {
+      message.innerHTML = '<p class="text-success text-center" id="message">hai indovinato 2 numeri</p>';
+    } else {
       message.innerText = 'Hai perso'
     }
 })
